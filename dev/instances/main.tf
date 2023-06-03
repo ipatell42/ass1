@@ -22,6 +22,15 @@ data "aws_ami" "latest_amazon_linux" {
   }
 }
 
+resource "aws_ecr_repository" "ass1_application"
+{
+  name = "ass1_application"
+}
+resource "aws_ecr_repository" "ass1_database"
+{
+  name = "ass1_database"
+}
+
 
 # Data source for availability zones in us-east-1
 data "aws_availability_zones" "available" {
